@@ -43,6 +43,7 @@ if (($conn->connect_error)) {
         </div>  
 
     </form>
+    <h3> Don't have an Account? <a href = "quizes/signup.php">Sign UP<h3>
     <?php
 if (isset($_POST['login'])) {
     if (!isset($_POST['username']) || $_POST['username'] == "") {

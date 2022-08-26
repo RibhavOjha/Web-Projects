@@ -14,11 +14,20 @@
     <nav>
         <ul>
             <li><h1> QUIZ MAKER</li>
-            <li> <h3> Welcome to DashBoard <?php session_start(); echo $_SESSION['username']?></h3></li>
+            <li> <h3> Welcome to the DashBoard, <?php session_start(); echo $_SESSION['username']?></h3></li>
+            <form method = 'POST'>
+            <button type = "submit" formaction = "logout.php" name="logout"> Logout</a>
+            </form>
+
         </ul>
     </nav>
 
-    
+    <div class="container">
+        <a href = "quizes/my_quizes.php">My Quizes </a>
+        <a href = "#">Add quiz </a>
+    </div>
+
+
     
 
     
