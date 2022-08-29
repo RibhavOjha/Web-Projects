@@ -17,6 +17,12 @@ if ($conn->connect_error) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    <link href='https://fonts.googleapis.com/css?family=Balsamiq Sans' rel='stylesheet'>
+    <style>
+    body {
+        font-family: 'Balsamiq Sans';font-size: 22px;
+    }
+    </style>
 </head>
 <body>
 <h1> QUIZ </h1>
@@ -24,16 +30,17 @@ if ($conn->connect_error) {
         $sql_quizzes = "SELECT * FROM quizes";
         $result_quizzes = mysqli_query($conn, $sql_quizzes);
         while($row_quizzes=mysqli_fetch_assoc($result_quizzes)){
-                $x = $row_quizzes['QUIZ 1'];
+                $x = $row_quizzes['quiz_name'];
+                echo $x;
                 if(isset($_POST[$row_quizzes['quiz_id']])){
                 $y = $_POST[$row_quizzes['quiz_id']];
+                echo $y;
                 }
                 else{
                     continue;
                 }
             if(trim(strval($x)) == trim(strval($y))){
                 $quiz_index = $row_quizzes['quiz_id'];
-                // echo $quiz_index;
                 break;  
             }
         }

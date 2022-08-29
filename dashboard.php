@@ -8,6 +8,12 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+    <link href='https://fonts.googleapis.com/css?family=Balsamiq Sans' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Balsamiq Sans';font-size: 22px;
+}
+</style>
 </head>
 <body>
     
@@ -24,7 +30,7 @@
 
     <div class="container">
         <a href = "quizes/my_quizes.php">My Quizes </a>
-        <a href = "#">Add quiz </a>
+        <a href = "quizes/add_quiz_form.php">Add quiz </a>
     </div>
 
 

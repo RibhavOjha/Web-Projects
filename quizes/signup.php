@@ -17,6 +17,12 @@ if (($conn->connect_error)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link href='https://fonts.googleapis.com/css?family=Balsamiq Sans' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Balsamiq Sans';font-size: 22px;
+}
+</style>
 </head>
 <body>
     <form  method = "POST">
@@ -104,7 +110,7 @@ if (isset($_POST['signup'])) {
     //     $_SESSION['username'] = $result[0]['username'];
     //     header("location:  dashboard.php");
     // }
-    // else {
+    //  {
     //     echo "<div class = 'message error'> Incorrect Credentials </div>";
     // }
     }

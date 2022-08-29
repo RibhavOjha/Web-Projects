@@ -20,30 +20,40 @@ if (($conn->connect_error)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Maker</title>
+    <link href='https://fonts.googleapis.com/css?family=Balsamiq Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+<style>
+body {
+    font-family: 'Balsamiq Sans';font-size: 22px;
+}
+</style>
     
     
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
 </head>
+
 <body>
-    <div id="userheader">
-        <h1>USER LOGIN </h1>
-    </div>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+    <div class="box">
+        <div class="container">
+        <div class="form">
+        <h2>USER LOGIN </h2>
+    
     <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "POST">
         <div class= "form-group">
-            <label>UserName</label>
-            <input type = "text" name = "username" autocomplete = "off"/>
+            <input type = "text" name = "username" autocomplete = "off" placeholder="Username"/>
         </div> 
-        <div class= "form-group">
-            <label>Password</label>
-            <input type = "password" name = "pass" autocomplete = "off"/>
+        <div class= "form-group">  
+            <input type = "password" name = "pass" autocomplete = "off" placeholder="Password"/>
         </div>
         <div class= "form-group">
-            
             <input type = "submit" name = "login" class = "btn" id = "submit" autocomplete = "off"/>
         </div>  
-
     </form>
-    <h3> Don't have an Account? <a href = "quizes/signup.php">Sign UP<h3>
+    <p class="forget"> Don't have an Account? <a href = "quizes/signup.php">Sign UP</p></a>
     <?php
 if (isset($_POST['login'])) {
     if (!isset($_POST['username']) || $_POST['username'] == "") {
@@ -96,7 +106,10 @@ if (isset($_POST['login'])) {
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js"></script>    
-
+    </div>
+    </div>
+    </div>
+</section>
     
 </body>
 </html>
